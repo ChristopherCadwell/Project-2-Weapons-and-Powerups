@@ -14,13 +14,10 @@ public class CameraController : MonoBehaviour
     {
 
     }
-
     // Update is called once per frame
     void Update()
     {
-
         transform.position = player.transform.position + new Vector3(0, camHeight, 0);//tell the camera to move to a point 7 units above the player
-
     }
 
 }

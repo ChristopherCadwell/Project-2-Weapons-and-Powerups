@@ -55,8 +55,7 @@ public class Health : Pickups
             overKill = 0;//output 0
             health = Mathf.Clamp(health - damage, 0f, health);//subtract damage from health, making sure not to subtract more than current health value
         }
-        Debug.Log("Damage done, new health value....");
-        Debug.Log(health);
+
         SendMessage("OnDamage", SendMessageOptions.DontRequireReceiver);
         onDamage.Invoke();
 
@@ -64,7 +63,6 @@ public class Health : Pickups
         {
             SendMessage("onDie", SendMessageOptions.DontRequireReceiver);//tell every object this is attched to to look for its onDie method -dont error if none
             onDie.Invoke();//call onDie
-            Debug.Log("OnDie Message Sent");
         }
     }
 
@@ -73,7 +71,6 @@ public class Health : Pickups
     {
 
         heal = Mathf.Max(heal, 0);//make sure the number is positive
-        Debug.Log(heal);
 
         if (heal > (maxHealth - health))//if the ammount healed would put the target over max health
         {
@@ -92,11 +89,7 @@ public class Health : Pickups
     {
         //need to add this to the player portion, destroy prevents audio from playing
         //aud.PlayOneShot(deathNoise) ;//play death sound
-
-        Debug.Log("Called death function");
-
         GameObject.Destroy(this.gameObject);//destroy game object
-       
     }
     
 

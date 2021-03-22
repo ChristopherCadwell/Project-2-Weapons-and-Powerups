@@ -12,7 +12,6 @@ public class DamagePickup : Pickups
     {
         base.Start();
     }
-
     // Update is called once per frame
     public override void Update()
     {
@@ -20,8 +19,7 @@ public class DamagePickup : Pickups
     }
     public override void OnPickup(Player player)
     {
-        
-        player.health.Damage(damage);
+        player.health.Damage(damage);//call damage function with damage value
         base.OnPickup(player);
     }
     

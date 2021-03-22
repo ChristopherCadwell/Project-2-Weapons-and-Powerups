@@ -88,7 +88,6 @@ public class Player : Pawn
             equippedWeapon.transform.parent = weaponContainer;//set weapon container as weapons parent
             equippedWeapon.transform.localPosition = weaponToEquip.transform.localPosition;//position weapon
             equippedWeapon.transform.localRotation = weaponToEquip.transform.localRotation;//rotate weapon
-
         }
         else
         {
@@ -98,9 +97,6 @@ public class Player : Pawn
             equippedWeapon.transform.localPosition = weaponToEquip.transform.localPosition;//position weapon
             equippedWeapon.transform.localRotation = weaponToEquip.transform.localRotation;//rotate weapon
         }
-
-
-
         base.EquipWeapon(weaponToEquip);
     }
 
@@ -110,7 +106,6 @@ public class Player : Pawn
 
 
     //collision detection (right now to check if we are on the ground or not)
-
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("ground"))//if the item collided with has the tag "ground"
@@ -119,6 +114,4 @@ public class Player : Pawn
             grounded = true;//set flag to true
         }
     }
-
-
 }

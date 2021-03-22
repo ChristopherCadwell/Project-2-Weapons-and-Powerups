@@ -63,18 +63,8 @@ public class GameManager : MonoBehaviour
         DummyPre = Resources.Load("Prefabs/Vampire");
         nextSpawnTime = Time.time + pickupSpawnDelay;//set timer for next spawn
     }
-
-    // Update is called once per frame
-    private void Update()
-    {
-        
-    }
-
-
     void FixedUpdate()
     {
-        
-
         //get a count of objects
         spears = GameObject.FindGameObjectsWithTag("Spear");
         daggers = GameObject.FindGameObjectsWithTag("Dagger");
@@ -119,24 +109,13 @@ public class GameManager : MonoBehaviour
                 //create a new heal pickup at the heal spawn point
                 GameObject Heal = (GameObject)Instantiate(HealPre, healSpawn.position, healSpawn.rotation);
             }
-
-
             //enemies
 
             if (dummys.Length == 0)//no training dummies
             {
                 GameObject Dummy = (GameObject)Instantiate(DummyPre, DummySpawn.position, DummySpawn.rotation);//spawn dummy at dummy spawn point
             }
-            
-            
-            
-            
-            
-            
             nextSpawnTime = Time.time + pickupSpawnDelay;//reset timer for next spawn
         }
     }
-    
 }
-
-

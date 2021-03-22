@@ -7,13 +7,11 @@ public class HealPickup : Pickups
     [SerializeField, Tooltip("How much healing to apply")]
     private float healing = 15;
 
-
     // Start is called before the first frame update
     public override void Start()
     {
         base.Start();
     }
-
     // Update is called once per frame
     public override void Update()
     {
@@ -21,8 +19,7 @@ public class HealPickup : Pickups
     }
     public override void OnPickup(Player player)
     {
-
-        player.health.Heal(healing);
+        player.health.Heal(healing);//call heal function with heal value
         base.OnPickup(player);
     }
 

@@ -63,8 +63,6 @@ public abstract class Weapons : MonoBehaviour
 
     }
 
-
-
     //Longsword
     public virtual void LongSwordAttackStart()
     {
@@ -72,7 +70,6 @@ public abstract class Weapons : MonoBehaviour
         {
             pawn.anim.SetBool("LongSwordAttack", true);//play attack animation
         }
-        Debug.Log("Attack trigger set");
     }
 
     public virtual void LongSwordAttackEnd()
@@ -81,14 +78,11 @@ public abstract class Weapons : MonoBehaviour
         {
             pawn.anim.SetBool("LongSwordAttack", false);//stop attack animation
         }
-
-        Debug.Log("Attack trigger cleared");
     }
     public virtual void LongSwordAltStart()
     {
         //block
         pawn.anim.SetBool("SwordBlock", true);//start block anim
-        Debug.Log("Block trigger sent");
     }
 
     public virtual void LongSwordAltEnd()
@@ -98,12 +92,7 @@ public abstract class Weapons : MonoBehaviour
         {
             pawn.anim.SetBool("SwordBlock", false);//stop block animation
         }
-
-        Debug.Log("block trigger cleared");
     }
-
-
-
 
 
     //dagger
@@ -114,7 +103,6 @@ public abstract class Weapons : MonoBehaviour
         {
             pawn.anim.SetBool("DaggerAttack", true);//play attack animation
         }
-        Debug.Log("Attack trigger set");
     }
 
     public virtual void DaggerAttackEnd()
@@ -123,8 +111,6 @@ public abstract class Weapons : MonoBehaviour
         {
             pawn.anim.SetBool("DaggerAttack", false);//stop attack animation
         }
-
-        Debug.Log("Attack trigger cleared");
     }
 
     public virtual void DaggerAltStart()
@@ -138,8 +124,6 @@ public abstract class Weapons : MonoBehaviour
         Throw();
     }
 
-
-
     //spear
 
     public virtual void SpearAttackStart()
@@ -148,7 +132,6 @@ public abstract class Weapons : MonoBehaviour
         {
             pawn.anim.SetBool("SpearAttack", true);//play attack animation
         }
-        Debug.Log("Attack trigger set");
     }
 
     public virtual void SpearAttackEnd()
@@ -157,8 +140,6 @@ public abstract class Weapons : MonoBehaviour
         {
             pawn.anim.SetBool("SpearAttack", false);//stop attack animation
         }
-
-        Debug.Log("Attack trigger cleared");
     }
 
     public virtual void SpearAltStart()

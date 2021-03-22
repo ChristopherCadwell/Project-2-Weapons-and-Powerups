@@ -23,11 +23,9 @@ public class HumanoidPawn : Pawn
         pchar = GetComponent<Rigidbody>();//get rigidbody
         base.Start();
     }
-
     public override void Update()
     {
         base.Update();
-
     }
     public override void Move(Vector3 moveDirection)
     {
@@ -53,6 +51,4 @@ public class HumanoidPawn : Pawn
         transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotateSpeed * Time.deltaTime);//combine the previous steps, and look based on frames
         base.RotateTowards(targetPoint);
     }
-    
-    
 }
